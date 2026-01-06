@@ -1,0 +1,9 @@
+# Airflow DB
+psycopg2-binary
+
+# Spark
+pyspark
+
+pandas
+numpy
+scikit-learn
