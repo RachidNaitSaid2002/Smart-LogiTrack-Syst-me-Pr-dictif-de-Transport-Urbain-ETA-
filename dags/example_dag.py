@@ -16,7 +16,6 @@ default_args = {
     "start_date": datetime(2026, 1, 3),
     "retries": 1,
 }
-
 dag = DAG(
     DAG_ID,
     default_args=default_args,
