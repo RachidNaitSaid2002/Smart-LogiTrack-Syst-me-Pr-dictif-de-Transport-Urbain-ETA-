@@ -3,4 +3,4 @@ Test
 airflow
 ml/data
 postgresql-42.7.3.jar
-.env
+.env.env
