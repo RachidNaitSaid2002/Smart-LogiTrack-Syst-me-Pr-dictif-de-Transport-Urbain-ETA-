@@ -3,7 +3,17 @@ psycopg2-binary
 
 # Spark
 pyspark
-
 pandas
 numpy
 scikit-learn
+
+# Web Framework and others
+dotenv
+sqlalchemy
+pydantic
+fastapi
+uvicorn
+passlib
+argon2_cffi
+python-jose
+pytest
