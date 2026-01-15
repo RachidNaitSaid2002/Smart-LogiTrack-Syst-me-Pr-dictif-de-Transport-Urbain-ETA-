@@ -1,0 +1,56 @@
+[2026-01-14T14:10:26.006+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_TAXI_TRIP.Extract manual__2026-01-14T14:10:24.576620+00:00 [queued]>
+[2026-01-14T14:10:26.020+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_TAXI_TRIP.Extract manual__2026-01-14T14:10:24.576620+00:00 [queued]>
+[2026-01-14T14:10:26.020+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2026-01-14T14:10:26.039+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): Extract> on 2026-01-14 14:10:24.576620+00:00
+[2026-01-14T14:10:26.046+0000] {standard_task_runner.py:60} INFO - Started process 234 to run task
+[2026-01-14T14:10:26.052+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ETL_TAXI_TRIP', 'Extract', 'manual__2026-01-14T14:10:24.576620+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/ELT.py', '--cfg-path', '/tmp/tmp3z7lj4vk']
+[2026-01-14T14:10:26.056+0000] {standard_task_runner.py:88} INFO - Job 36: Subtask Extract
+[2026-01-14T14:10:26.126+0000] {task_command.py:423} INFO - Running <TaskInstance: ETL_TAXI_TRIP.Extract manual__2026-01-14T14:10:24.576620+00:00 [running]> on host 0f942e5daad9
+[2026-01-14T14:10:26.252+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ETL_TAXI_TRIP' AIRFLOW_CTX_TASK_ID='Extract' AIRFLOW_CTX_EXECUTION_DATE='2026-01-14T14:10:24.576620+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-01-14T14:10:24.576620+00:00'
+[2026-01-14T14:10:35.525+0000] {logging_mixin.py:188} WARNING - Downloading...
+[2026-01-14T14:10:35.526+0000] {logging_mixin.py:188} WARNING - From: https://drive.google.com/uc?id=1zVL3AIQFKE_lwEYdX2CJJnJRQLRKmUAa
+[2026-01-14T14:10:35.526+0000] {logging_mixin.py:188} WARNING - To: /media/rachid/d70e3dc6-74e7-4c87-96bc-e4c3689c979a/lmobrmij/Projects/Smart-LogiTrack-Syst-me-Pr-dictif-de-Transport-Urbain-ETA-/Test/Data/dataset.parquet
+[2026-01-14T14:10:35.535+0000] {logging_mixin.py:188} WARNING -   0%|          | 0.00/59.2M [00:00<?, ?B/s]
+[2026-01-14T14:10:35.670+0000] {logging_mixin.py:188} WARNING -   1%|          | 524k/59.2M [00:00<00:15, 3.91MB/s]
+[2026-01-14T14:10:35.804+0000] {logging_mixin.py:188} WARNING -   4%|3         | 2.10M/59.2M [00:00<00:06, 8.48MB/s]
+[2026-01-14T14:10:35.979+0000] {logging_mixin.py:188} WARNING -   6%|6         | 3.67M/59.2M [00:00<00:06, 8.75MB/s]
+[2026-01-14T14:10:36.121+0000] {logging_mixin.py:188} WARNING -  10%|9         | 5.77M/59.2M [00:00<00:04, 11.0MB/s]
+[2026-01-14T14:10:36.255+0000] {logging_mixin.py:188} WARNING -  12%|#2        | 7.34M/59.2M [00:00<00:04, 11.3MB/s]
+[2026-01-14T14:10:36.390+0000] {logging_mixin.py:188} WARNING -  15%|#5        | 8.91M/59.2M [00:00<00:04, 11.4MB/s]
+[2026-01-14T14:10:36.524+0000] {logging_mixin.py:188} WARNING -  18%|#7        | 10.5M/59.2M [00:00<00:04, 11.5MB/s]
+[2026-01-14T14:10:36.658+0000] {logging_mixin.py:188} WARNING -  20%|##        | 12.1M/59.2M [00:01<00:04, 11.6MB/s]
+[2026-01-14T14:10:36.792+0000] {logging_mixin.py:188} WARNING -  23%|##3       | 13.6M/59.2M [00:01<00:03, 11.6MB/s]
+[2026-01-14T14:10:36.926+0000] {logging_mixin.py:188} WARNING -  26%|##5       | 15.2M/59.2M [00:01<00:03, 11.7MB/s]
+[2026-01-14T14:10:37.061+0000] {logging_mixin.py:188} WARNING -  28%|##8       | 16.8M/59.2M [00:01<00:03, 11.7MB/s]
+[2026-01-14T14:10:37.195+0000] {logging_mixin.py:188} WARNING -  31%|###1      | 18.4M/59.2M [00:01<00:03, 11.7MB/s]
+[2026-01-14T14:10:37.329+0000] {logging_mixin.py:188} WARNING -  34%|###3      | 19.9M/59.2M [00:01<00:03, 11.7MB/s]
+[2026-01-14T14:10:37.462+0000] {logging_mixin.py:188} WARNING -  36%|###6      | 21.5M/59.2M [00:01<00:03, 11.7MB/s]
+[2026-01-14T14:10:37.597+0000] {logging_mixin.py:188} WARNING -  39%|###8      | 23.1M/59.2M [00:02<00:03, 11.7MB/s]
+[2026-01-14T14:10:37.732+0000] {logging_mixin.py:188} WARNING -  42%|####1     | 24.6M/59.2M [00:02<00:02, 11.7MB/s]
+[2026-01-14T14:10:37.865+0000] {logging_mixin.py:188} WARNING -  44%|####4     | 26.2M/59.2M [00:02<00:02, 11.7MB/s]
+[2026-01-14T14:10:37.999+0000] {logging_mixin.py:188} WARNING -  47%|####6     | 27.8M/59.2M [00:02<00:02, 11.7MB/s]
+[2026-01-14T14:10:38.133+0000] {logging_mixin.py:188} WARNING -  50%|####9     | 29.4M/59.2M [00:02<00:02, 11.7MB/s]
+[2026-01-14T14:10:38.267+0000] {logging_mixin.py:188} WARNING -  52%|#####2    | 30.9M/59.2M [00:02<00:02, 11.7MB/s]
+[2026-01-14T14:10:38.401+0000] {logging_mixin.py:188} WARNING -  55%|#####4    | 32.5M/59.2M [00:02<00:02, 11.7MB/s]
+[2026-01-14T14:10:38.535+0000] {logging_mixin.py:188} WARNING -  58%|#####7    | 34.1M/59.2M [00:02<00:02, 11.7MB/s]
+[2026-01-14T14:10:38.670+0000] {logging_mixin.py:188} WARNING -  60%|######    | 35.7M/59.2M [00:03<00:02, 11.7MB/s]
+[2026-01-14T14:10:38.804+0000] {logging_mixin.py:188} WARNING -  63%|######2   | 37.2M/59.2M [00:03<00:01, 11.7MB/s]
+[2026-01-14T14:10:38.939+0000] {logging_mixin.py:188} WARNING -  66%|######5   | 38.8M/59.2M [00:03<00:01, 11.7MB/s]
+[2026-01-14T14:10:39.073+0000] {logging_mixin.py:188} WARNING -  68%|######8   | 40.4M/59.2M [00:03<00:01, 11.7MB/s]
+[2026-01-14T14:10:39.206+0000] {logging_mixin.py:188} WARNING -  71%|#######   | 41.9M/59.2M [00:03<00:01, 11.7MB/s]
+[2026-01-14T14:10:39.340+0000] {logging_mixin.py:188} WARNING -  74%|#######3  | 43.5M/59.2M [00:03<00:01, 11.7MB/s]
+[2026-01-14T14:10:39.474+0000] {logging_mixin.py:188} WARNING -  76%|#######6  | 45.1M/59.2M [00:03<00:01, 11.7MB/s]
+[2026-01-14T14:10:39.609+0000] {logging_mixin.py:188} WARNING -  79%|#######8  | 46.7M/59.2M [00:04<00:01, 11.7MB/s]
+[2026-01-14T14:10:39.742+0000] {logging_mixin.py:188} WARNING -  82%|########1 | 48.2M/59.2M [00:04<00:00, 11.7MB/s]
+[2026-01-14T14:10:39.877+0000] {logging_mixin.py:188} WARNING -  84%|########4 | 49.8M/59.2M [00:04<00:00, 11.7MB/s]
+[2026-01-14T14:10:40.011+0000] {logging_mixin.py:188} WARNING -  87%|########6 | 51.4M/59.2M [00:04<00:00, 11.7MB/s]
+[2026-01-14T14:10:40.145+0000] {logging_mixin.py:188} WARNING -  90%|########9 | 53.0M/59.2M [00:04<00:00, 11.7MB/s]
+[2026-01-14T14:10:40.280+0000] {logging_mixin.py:188} WARNING -  92%|#########2| 54.5M/59.2M [00:04<00:00, 11.7MB/s]
+[2026-01-14T14:10:40.483+0000] {logging_mixin.py:188} WARNING -  95%|#########4| 56.1M/59.2M [00:04<00:00, 10.1MB/s]
+[2026-01-14T14:10:40.692+0000] {logging_mixin.py:188} WARNING -  97%|#########7| 57.7M/59.2M [00:05<00:00, 9.19MB/s]
+[2026-01-14T14:10:40.879+0000] {logging_mixin.py:188} WARNING -  99%|#########9| 58.7M/59.2M [00:05<00:00, 8.06MB/s]
+[2026-01-14T14:10:40.939+0000] {logging_mixin.py:188} WARNING - 100%|##########| 59.2M/59.2M [00:05<00:00, 10.9MB/s]
+[2026-01-14T14:10:44.039+0000] {python.py:201} INFO - Done. Returned value was: None
+[2026-01-14T14:10:44.054+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ETL_TAXI_TRIP, task_id=Extract, execution_date=20260114T141024, start_date=20260114T141026, end_date=20260114T141044
+[2026-01-14T14:10:44.102+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-01-14T14:10:44.134+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

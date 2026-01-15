@@ -1,0 +1,35 @@
+[2026-01-13T14:04:20.676+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_TAXI_TRIP.Extract manual__2026-01-13T14:04:19.018464+00:00 [queued]>
+[2026-01-13T14:04:20.687+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_TAXI_TRIP.Extract manual__2026-01-13T14:04:19.018464+00:00 [queued]>
+[2026-01-13T14:04:20.688+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2026-01-13T14:04:20.708+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): Extract> on 2026-01-13 14:04:19.018464+00:00
+[2026-01-13T14:04:20.713+0000] {standard_task_runner.py:60} INFO - Started process 330 to run task
+[2026-01-13T14:04:20.718+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ETL_TAXI_TRIP', 'Extract', 'manual__2026-01-13T14:04:19.018464+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/ELT.py', '--cfg-path', '/tmp/tmpsup7ebxf']
+[2026-01-13T14:04:20.720+0000] {standard_task_runner.py:88} INFO - Job 11: Subtask Extract
+[2026-01-13T14:04:20.780+0000] {task_command.py:423} INFO - Running <TaskInstance: ETL_TAXI_TRIP.Extract manual__2026-01-13T14:04:19.018464+00:00 [running]> on host e3906867462a
+[2026-01-13T14:04:20.867+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ETL_TAXI_TRIP' AIRFLOW_CTX_TASK_ID='Extract' AIRFLOW_CTX_EXECUTION_DATE='2026-01-13T14:04:19.018464+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-01-13T14:04:19.018464+00:00'
+[2026-01-13T14:04:29.276+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ELT.py", line 126, in Extract_data
+    gdown.download(id=FILE_ID, output=output_path, quiet=False)
+  File "/home/airflow/.local/lib/python3.8/site-packages/gdown/download.py", line 294, in download
+    os.makedirs(output)
+  File "/usr/local/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/usr/local/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/usr/local/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  [Previous line repeated 3 more times]
+  File "/usr/local/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/media/rachid'
+[2026-01-13T14:04:29.293+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=ETL_TAXI_TRIP, task_id=Extract, execution_date=20260113T140419, start_date=20260113T140420, end_date=20260113T140429
+[2026-01-13T14:04:29.312+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 11 for task Extract ([Errno 13] Permission denied: '/media/rachid'; 330)
+[2026-01-13T14:04:29.348+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-01-13T14:04:29.395+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

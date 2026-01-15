@@ -17,3 +17,6 @@ passlib
 argon2_cffi
 python-jose
 pytest
+
+# For downloading files from Google Drive
+gdown

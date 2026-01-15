@@ -1,0 +1,13 @@
+[2026-01-14T17:43:27.081+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_TAXI_TRIP.Save_Bronze manual__2026-01-14T17:43:05.955089+00:00 [queued]>
+[2026-01-14T17:43:27.093+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_TAXI_TRIP.Save_Bronze manual__2026-01-14T17:43:05.955089+00:00 [queued]>
+[2026-01-14T17:43:27.094+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2026-01-14T17:43:27.110+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): Save_Bronze> on 2026-01-14 17:43:05.955089+00:00
+[2026-01-14T17:43:27.116+0000] {standard_task_runner.py:60} INFO - Started process 1891 to run task
+[2026-01-14T17:43:27.121+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ETL_TAXI_TRIP', 'Save_Bronze', 'manual__2026-01-14T17:43:05.955089+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/ELT.py', '--cfg-path', '/tmp/tmp25z0_6jw']
+[2026-01-14T17:43:27.124+0000] {standard_task_runner.py:88} INFO - Job 7: Subtask Save_Bronze
+[2026-01-14T17:43:27.182+0000] {task_command.py:423} INFO - Running <TaskInstance: ETL_TAXI_TRIP.Save_Bronze manual__2026-01-14T17:43:05.955089+00:00 [running]> on host 993c9366ec1d
+[2026-01-14T17:43:27.284+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ETL_TAXI_TRIP' AIRFLOW_CTX_TASK_ID='Save_Bronze' AIRFLOW_CTX_EXECUTION_DATE='2026-01-14T17:43:05.955089+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-01-14T17:43:05.955089+00:00'
+[2026-01-14T17:43:42.696+0000] {python.py:201} INFO - Done. Returned value was: None
+[2026-01-14T17:43:42.716+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ETL_TAXI_TRIP, task_id=Save_Bronze, execution_date=20260114T174305, start_date=20260114T174327, end_date=20260114T174342
+[2026-01-14T17:43:42.784+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-01-14T17:43:42.811+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

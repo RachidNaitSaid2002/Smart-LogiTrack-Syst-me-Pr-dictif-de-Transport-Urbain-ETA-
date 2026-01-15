@@ -1,0 +1,45 @@
+[2026-01-13T21:33:52.743+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_TAXI_TRIP.Prepare_Silver manual__2026-01-13T21:21:54.950118+00:00 [queued]>
+[2026-01-13T21:33:52.756+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_TAXI_TRIP.Prepare_Silver manual__2026-01-13T21:21:54.950118+00:00 [queued]>
+[2026-01-13T21:33:52.756+0000] {taskinstance.py:2170} INFO - Starting attempt 3 of 3
+[2026-01-13T21:33:52.774+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): Prepare_Silver> on 2026-01-13 21:21:54.950118+00:00
+[2026-01-13T21:33:52.780+0000] {standard_task_runner.py:60} INFO - Started process 1865 to run task
+[2026-01-13T21:33:52.785+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ETL_TAXI_TRIP', 'Prepare_Silver', 'manual__2026-01-13T21:21:54.950118+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/ELT.py', '--cfg-path', '/tmp/tmp46qkbrvk']
+[2026-01-13T21:33:52.788+0000] {standard_task_runner.py:88} INFO - Job 27: Subtask Prepare_Silver
+[2026-01-13T21:33:52.850+0000] {task_command.py:423} INFO - Running <TaskInstance: ETL_TAXI_TRIP.Prepare_Silver manual__2026-01-13T21:21:54.950118+00:00 [running]> on host 0f942e5daad9
+[2026-01-13T21:33:52.972+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ETL_TAXI_TRIP' AIRFLOW_CTX_TASK_ID='Prepare_Silver' AIRFLOW_CTX_EXECUTION_DATE='2026-01-13T21:21:54.950118+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-01-13T21:21:54.950118+00:00'
+[2026-01-13T21:34:03.895+0000] {logging_mixin.py:188} INFO - Column passenger_count has 540149 null values (15.54%)
+[2026-01-13T21:34:04.933+0000] {logging_mixin.py:188} INFO - Column RatecodeID has 540149 null values (15.54%)
+[2026-01-13T21:34:05.511+0000] {logging_mixin.py:188} INFO - Column store_and_fwd_flag has 540149 null values (15.54%)
+[2026-01-13T21:34:07.207+0000] {local_task_job_runner.py:121} ERROR - Received SIGTERM. Terminating subprocesses
+[2026-01-13T21:34:07.211+0000] {process_utils.py:131} INFO - Sending 15 to group 1865. PIDs of all processes in the group: [1866, 1865]
+[2026-01-13T21:34:07.216+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 1865
+[2026-01-13T21:34:07.221+0000] {taskinstance.py:2450} ERROR - Received SIGTERM. Terminating subprocesses.
+[2026-01-13T21:34:07.229+0000] {clientserver.py:538} INFO - Error while receiving.
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/local/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2452, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2026-01-13T21:34:07.246+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2026-01-13T21:34:07.248+0000] {java_gateway.py:1055} ERROR - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/local/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2452, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/airflow/.local/lib/python3.8/site-packages/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+[2026-01-13T21:34:07.252+0000] {clientserver.py:543} INFO - Closing down clientserver connection

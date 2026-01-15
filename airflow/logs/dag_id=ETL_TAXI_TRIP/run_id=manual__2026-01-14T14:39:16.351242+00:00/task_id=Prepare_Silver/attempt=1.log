@@ -1,0 +1,20 @@
+[2026-01-14T14:39:52.394+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_TAXI_TRIP.Prepare_Silver manual__2026-01-14T14:39:16.351242+00:00 [queued]>
+[2026-01-14T14:39:52.405+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_TAXI_TRIP.Prepare_Silver manual__2026-01-14T14:39:16.351242+00:00 [queued]>
+[2026-01-14T14:39:52.405+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2026-01-14T14:39:52.422+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): Prepare_Silver> on 2026-01-14 14:39:16.351242+00:00
+[2026-01-14T14:39:52.428+0000] {standard_task_runner.py:60} INFO - Started process 3252 to run task
+[2026-01-14T14:39:52.433+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ETL_TAXI_TRIP', 'Prepare_Silver', 'manual__2026-01-14T14:39:16.351242+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/ELT.py', '--cfg-path', '/tmp/tmp3q54nixk']
+[2026-01-14T14:39:52.436+0000] {standard_task_runner.py:88} INFO - Job 43: Subtask Prepare_Silver
+[2026-01-14T14:39:52.490+0000] {task_command.py:423} INFO - Running <TaskInstance: ETL_TAXI_TRIP.Prepare_Silver manual__2026-01-14T14:39:16.351242+00:00 [running]> on host 0f942e5daad9
+[2026-01-14T14:39:52.577+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ETL_TAXI_TRIP' AIRFLOW_CTX_TASK_ID='Prepare_Silver' AIRFLOW_CTX_EXECUTION_DATE='2026-01-14T14:39:16.351242+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-01-14T14:39:16.351242+00:00'
+[2026-01-14T14:40:02.560+0000] {logging_mixin.py:188} INFO - Column passenger_count has 540149 null values (15.54%)
+[2026-01-14T14:40:03.628+0000] {logging_mixin.py:188} INFO - Column RatecodeID has 540149 null values (15.54%)
+[2026-01-14T14:40:04.323+0000] {logging_mixin.py:188} INFO - Column store_and_fwd_flag has 540149 null values (15.54%)
+[2026-01-14T14:40:10.188+0000] {logging_mixin.py:188} INFO - Column congestion_surcharge has 540149 null values (15.54%)
+[2026-01-14T14:40:10.604+0000] {logging_mixin.py:188} INFO - Column Airport_fee has 540149 null values (15.54%)
+[2026-01-14T14:40:21.001+0000] {logging_mixin.py:188} INFO - you don't have any duplicated values !!
+[2026-01-14T14:40:27.939+0000] {logging_mixin.py:188} INFO - jdbc:postgresql://None:None/None
+[2026-01-14T14:40:28.166+0000] {python.py:201} INFO - Done. Returned value was: None
+[2026-01-14T14:40:28.183+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ETL_TAXI_TRIP, task_id=Prepare_Silver, execution_date=20260114T143916, start_date=20260114T143952, end_date=20260114T144028
+[2026-01-14T14:40:28.246+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-01-14T14:40:28.297+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

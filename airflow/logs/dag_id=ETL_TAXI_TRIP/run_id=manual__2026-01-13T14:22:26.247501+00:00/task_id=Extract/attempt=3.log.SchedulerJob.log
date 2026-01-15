@@ -1,0 +1,1 @@
+[2026-01-13T14:33:15.157+0000] {scheduler_job_runner.py:781} ERROR - Executor reports task instance <TaskInstance: ETL_TAXI_TRIP.Extract manual__2026-01-13T14:22:26.247501+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

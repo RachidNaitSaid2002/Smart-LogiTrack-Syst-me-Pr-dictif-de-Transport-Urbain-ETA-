@@ -1,0 +1,113 @@
+[2026-01-13T14:22:27.715+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_TAXI_TRIP.Extract manual__2026-01-13T14:22:26.247501+00:00 [queued]>
+[2026-01-13T14:22:27.726+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_TAXI_TRIP.Extract manual__2026-01-13T14:22:26.247501+00:00 [queued]>
+[2026-01-13T14:22:27.727+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2026-01-13T14:22:27.747+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): Extract> on 2026-01-13 14:22:26.247501+00:00
+[2026-01-13T14:22:27.753+0000] {standard_task_runner.py:60} INFO - Started process 246 to run task
+[2026-01-13T14:22:27.758+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ETL_TAXI_TRIP', 'Extract', 'manual__2026-01-13T14:22:26.247501+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/ELT.py', '--cfg-path', '/tmp/tmpoqkxk7tj']
+[2026-01-13T14:22:27.761+0000] {standard_task_runner.py:88} INFO - Job 15: Subtask Extract
+[2026-01-13T14:22:27.819+0000] {task_command.py:423} INFO - Running <TaskInstance: ETL_TAXI_TRIP.Extract manual__2026-01-13T14:22:26.247501+00:00 [running]> on host 0f942e5daad9
+[2026-01-13T14:22:27.924+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ETL_TAXI_TRIP' AIRFLOW_CTX_TASK_ID='Extract' AIRFLOW_CTX_EXECUTION_DATE='2026-01-13T14:22:26.247501+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-01-13T14:22:26.247501+00:00'
+[2026-01-13T14:22:35.050+0000] {logging_mixin.py:188} WARNING - Downloading...
+[2026-01-13T14:22:35.051+0000] {logging_mixin.py:188} WARNING - From: https://drive.google.com/uc?id=1zVL3AIQFKE_lwEYdX2CJJnJRQLRKmUAa
+[2026-01-13T14:22:35.052+0000] {logging_mixin.py:188} WARNING - To: /media/rachid/d70e3dc6-74e7-4c87-96bc-e4c3689c979a/lmobrmij/Projects/Smart-LogiTrack-Syst-me-Pr-dictif-de-Transport-Urbain-ETA-/Test/Data/dataset.parquet
+[2026-01-13T14:22:35.060+0000] {logging_mixin.py:188} WARNING -   0%|          | 0.00/59.2M [00:00<?, ?B/s]
+[2026-01-13T14:22:35.210+0000] {logging_mixin.py:188} WARNING -   1%|          | 524k/59.2M [00:00<00:16, 3.53MB/s]
+[2026-01-13T14:22:35.330+0000] {logging_mixin.py:188} WARNING -   3%|2         | 1.57M/59.2M [00:00<00:09, 6.30MB/s]
+[2026-01-13T14:22:35.461+0000] {logging_mixin.py:188} WARNING -   4%|4         | 2.62M/59.2M [00:00<00:07, 7.08MB/s]
+[2026-01-13T14:22:35.575+0000] {logging_mixin.py:188} WARNING -   6%|6         | 3.67M/59.2M [00:00<00:07, 7.85MB/s]
+[2026-01-13T14:22:35.697+0000] {logging_mixin.py:188} WARNING -   8%|7         | 4.72M/59.2M [00:00<00:06, 8.10MB/s]
+[2026-01-13T14:22:35.865+0000] {logging_mixin.py:188} WARNING -  10%|9         | 5.77M/59.2M [00:00<00:07, 7.35MB/s]
+[2026-01-13T14:22:35.977+0000] {logging_mixin.py:188} WARNING -  12%|#1        | 6.82M/59.2M [00:00<00:06, 7.90MB/s]
+[2026-01-13T14:22:36.148+0000] {logging_mixin.py:188} WARNING -  13%|#3        | 7.86M/59.2M [00:01<00:07, 7.24MB/s]
+[2026-01-13T14:22:36.302+0000] {logging_mixin.py:188} WARNING -  15%|#5        | 8.91M/59.2M [00:01<00:07, 7.10MB/s]
+[2026-01-13T14:22:36.458+0000] {logging_mixin.py:188} WARNING -  17%|#6        | 9.96M/59.2M [00:01<00:07, 6.98MB/s]
+[2026-01-13T14:22:36.629+0000] {logging_mixin.py:188} WARNING -  19%|#8        | 11.0M/59.2M [00:01<00:07, 6.69MB/s]
+[2026-01-13T14:22:36.804+0000] {logging_mixin.py:188} WARNING -  20%|##        | 12.1M/59.2M [00:01<00:07, 6.46MB/s]
+[2026-01-13T14:22:37.013+0000] {logging_mixin.py:188} WARNING -  22%|##2       | 13.1M/59.2M [00:01<00:07, 5.94MB/s]
+[2026-01-13T14:22:37.195+0000] {logging_mixin.py:188} WARNING -  24%|##3       | 14.2M/59.2M [00:02<00:07, 5.89MB/s]
+[2026-01-13T14:22:37.342+0000] {logging_mixin.py:188} WARNING -  26%|##5       | 15.2M/59.2M [00:02<00:07, 6.21MB/s]
+[2026-01-13T14:22:39.602+0000] {logging_mixin.py:188} WARNING -  27%|##7       | 16.3M/59.2M [00:04<00:32, 1.31MB/s]
+[2026-01-13T14:22:40.045+0000] {logging_mixin.py:188} WARNING -  28%|##8       | 16.8M/59.2M [00:04<00:32, 1.29MB/s]
+[2026-01-13T14:22:40.434+0000] {logging_mixin.py:188} WARNING -  29%|##9       | 17.3M/59.2M [00:05<00:32, 1.30MB/s]
+[2026-01-13T14:22:40.670+0000] {logging_mixin.py:188} WARNING -  30%|###       | 17.8M/59.2M [00:05<00:28, 1.43MB/s]
+[2026-01-13T14:22:40.907+0000] {logging_mixin.py:188} WARNING -  31%|###1      | 18.4M/59.2M [00:05<00:26, 1.57MB/s]
+[2026-01-13T14:22:41.148+0000] {logging_mixin.py:188} WARNING -  32%|###1      | 18.9M/59.2M [00:06<00:23, 1.69MB/s]
+[2026-01-13T14:22:41.401+0000] {logging_mixin.py:188} WARNING -  33%|###2      | 19.4M/59.2M [00:06<00:22, 1.78MB/s]
+[2026-01-13T14:22:41.648+0000] {logging_mixin.py:188} WARNING -  34%|###3      | 19.9M/59.2M [00:06<00:21, 1.86MB/s]
+[2026-01-13T14:22:41.891+0000] {logging_mixin.py:188} WARNING -  35%|###4      | 20.4M/59.2M [00:06<00:19, 1.94MB/s]
+[2026-01-13T14:22:42.044+0000] {logging_mixin.py:188} WARNING -  35%|###5      | 21.0M/59.2M [00:06<00:17, 2.21MB/s]
+[2026-01-13T14:22:42.167+0000] {logging_mixin.py:188} WARNING -  36%|###6      | 21.5M/59.2M [00:07<00:14, 2.57MB/s]
+[2026-01-13T14:22:42.344+0000] {logging_mixin.py:188} WARNING -  38%|###8      | 22.5M/59.2M [00:07<00:10, 3.47MB/s]
+[2026-01-13T14:22:42.614+0000] {logging_mixin.py:188} WARNING -  40%|###9      | 23.6M/59.2M [00:07<00:09, 3.62MB/s]
+[2026-01-13T14:22:42.798+0000] {logging_mixin.py:188} WARNING -  43%|####3     | 25.7M/59.2M [00:07<00:05, 5.67MB/s]
+[2026-01-13T14:22:42.924+0000] {logging_mixin.py:188} WARNING -  45%|####5     | 26.7M/59.2M [00:07<00:05, 6.21MB/s]
+[2026-01-13T14:22:43.062+0000] {logging_mixin.py:188} WARNING -  47%|####6     | 27.8M/59.2M [00:08<00:04, 6.55MB/s]
+[2026-01-13T14:22:43.201+0000] {logging_mixin.py:188} WARNING -  49%|####8     | 28.8M/59.2M [00:08<00:04, 6.80MB/s]
+[2026-01-13T14:22:43.337+0000] {logging_mixin.py:188} WARNING -  51%|#####     | 29.9M/59.2M [00:08<00:04, 7.04MB/s]
+[2026-01-13T14:22:43.477+0000] {logging_mixin.py:188} WARNING -  52%|#####2    | 30.9M/59.2M [00:08<00:03, 7.17MB/s]
+[2026-01-13T14:22:43.610+0000] {logging_mixin.py:188} WARNING -  54%|#####4    | 32.0M/59.2M [00:08<00:03, 7.37MB/s]
+[2026-01-13T14:22:43.760+0000] {logging_mixin.py:188} WARNING -  56%|#####5    | 33.0M/59.2M [00:08<00:03, 7.25MB/s]
+[2026-01-13T14:22:43.907+0000] {logging_mixin.py:188} WARNING -  58%|#####7    | 34.1M/59.2M [00:08<00:03, 7.21MB/s]
+[2026-01-13T14:22:44.045+0000] {logging_mixin.py:188} WARNING -  59%|#####9    | 35.1M/59.2M [00:08<00:03, 7.33MB/s]
+[2026-01-13T14:22:44.182+0000] {logging_mixin.py:188} WARNING -  61%|######1   | 36.2M/59.2M [00:09<00:03, 7.42MB/s]
+[2026-01-13T14:22:44.325+0000] {logging_mixin.py:188} WARNING -  63%|######2   | 37.2M/59.2M [00:09<00:02, 7.39MB/s]
+[2026-01-13T14:22:44.455+0000] {logging_mixin.py:188} WARNING -  65%|######4   | 38.3M/59.2M [00:09<00:02, 7.59MB/s]
+[2026-01-13T14:22:44.558+0000] {logging_mixin.py:188} WARNING -  66%|######6   | 39.3M/59.2M [00:09<00:02, 8.21MB/s]
+[2026-01-13T14:22:44.692+0000] {logging_mixin.py:188} WARNING -  69%|######9   | 40.9M/59.2M [00:09<00:01, 9.30MB/s]
+[2026-01-13T14:22:44.826+0000] {logging_mixin.py:188} WARNING -  72%|#######1  | 42.5M/59.2M [00:09<00:01, 10.0MB/s]
+[2026-01-13T14:22:44.963+0000] {logging_mixin.py:188} WARNING -  74%|#######3  | 43.5M/59.2M [00:09<00:01, 9.33MB/s]
+[2026-01-13T14:22:45.102+0000] {logging_mixin.py:188} WARNING -  77%|#######7  | 45.6M/59.2M [00:10<00:01, 11.1MB/s]
+[2026-01-13T14:22:45.238+0000] {logging_mixin.py:188} WARNING -  80%|#######9  | 47.2M/59.2M [00:10<00:01, 11.3MB/s]
+[2026-01-13T14:22:45.398+0000] {logging_mixin.py:188} WARNING -  82%|########2 | 48.8M/59.2M [00:10<00:00, 10.8MB/s]
+[2026-01-13T14:22:45.547+0000] {logging_mixin.py:188} WARNING -  85%|########5 | 50.3M/59.2M [00:10<00:00, 10.7MB/s]
+[2026-01-13T14:22:48.891+0000] {logging_mixin.py:188} WARNING -  88%|########7 | 51.9M/59.2M [00:13<00:05, 1.41MB/s]
+[2026-01-13T14:22:49.036+0000] {logging_mixin.py:188} WARNING -  90%|########9 | 53.0M/59.2M [00:13<00:03, 1.72MB/s]
+[2026-01-13T14:22:49.140+0000] {logging_mixin.py:188} WARNING -  91%|#########1| 54.0M/59.2M [00:14<00:02, 2.15MB/s]
+[2026-01-13T14:22:49.272+0000] {logging_mixin.py:188} WARNING -  93%|#########3| 55.1M/59.2M [00:14<00:01, 2.65MB/s]
+[2026-01-13T14:22:49.403+0000] {logging_mixin.py:188} WARNING -  95%|#########4| 56.1M/59.2M [00:14<00:00, 3.23MB/s]
+[2026-01-13T14:22:49.532+0000] {logging_mixin.py:188} WARNING -  97%|#########6| 57.1M/59.2M [00:14<00:00, 3.88MB/s]
+[2026-01-13T14:22:49.658+0000] {logging_mixin.py:188} WARNING -  98%|#########8| 58.2M/59.2M [00:14<00:00, 4.57MB/s]
+[2026-01-13T14:22:49.771+0000] {logging_mixin.py:188} WARNING - 100%|##########| 59.2M/59.2M [00:14<00:00, 5.23MB/s]
+[2026-01-13T14:22:49.772+0000] {logging_mixin.py:188} WARNING - 100%|##########| 59.2M/59.2M [00:14<00:00, 4.02MB/s]
+[2026-01-13T14:22:52.969+0000] {python.py:201} INFO - Done. Returned value was: DataFrame[VendorID: int, tpep_pickup_datetime: timestamp_ntz, tpep_dropoff_datetime: timestamp_ntz, passenger_count: bigint, trip_distance: double, RatecodeID: bigint, store_and_fwd_flag: string, PULocationID: int, DOLocationID: int, payment_type: bigint, fare_amount: double, extra: double, mta_tax: double, tip_amount: double, tolls_amount: double, improvement_surcharge: double, total_amount: double, congestion_surcharge: double, Airport_fee: double, cbd_congestion_fee: double]
+[2026-01-13T14:22:53.012+0000] {xcom.py:664} ERROR - Object of type DataFrame is not JSON serializable. If you are using pickle instead of JSON for XCom, then you need to enable pickle support for XCom in your *** config or make sure to decorate your object with attr.
+[2026-01-13T14:22:53.015+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/json.py", line 91, in default
+    return serialize(o)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/serialization/serde.py", line 180, in serialize
+    raise TypeError(f"cannot serialize object of type {cls}")
+TypeError: cannot serialize object of type <class 'pyspark.sql.dataframe.DataFrame'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 440, in _execute_task
+    task_instance.xcom_push(key=XCOM_RETURN_KEY, value=xcom_value, session=session)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2980, in xcom_push
+    XCom.set(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/xcom.py", line 247, in set
+    value = cls.serialize_value(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/xcom.py", line 662, in serialize_value
+    return json.dumps(value, cls=XComEncoder).encode("UTF-8")
+  File "/usr/local/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/json.py", line 104, in encode
+    return super().encode(o)
+  File "/usr/local/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/json.py", line 93, in default
+    return super().default(o)
+  File "/usr/local/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type DataFrame is not JSON serializable
+[2026-01-13T14:22:53.032+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=ETL_TAXI_TRIP, task_id=Extract, execution_date=20260113T142226, start_date=20260113T142227, end_date=20260113T142253
+[2026-01-13T14:22:53.052+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 15 for task Extract (Object of type DataFrame is not JSON serializable; 246)
+[2026-01-13T14:22:53.070+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-01-13T14:22:53.109+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

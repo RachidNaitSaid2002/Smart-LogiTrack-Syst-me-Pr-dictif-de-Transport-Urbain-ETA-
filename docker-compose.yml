@@ -2,7 +2,7 @@
 services:
 
   postgres:
-    image: postgres:18
+    image: postgres:13
     environment:
       POSTGRES_USER: airflow
       POSTGRES_PASSWORD: airflow
@@ -16,7 +16,9 @@ services:
       - postgres-db:/var/lib/postgresql/data
 
   airflow-init:
-    build: .
+    build:
+      context: .
+      dockerfile: airflow/Dockerfile
     container_name: airflow-init
     depends_on:
       postgres:
@@ -25,22 +27,34 @@ services:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     volumes:
-      - ./init_airflow.sh:/init_airflow.sh
+      - ./airflow/init_airflow.sh:/init_airflow.sh
     entrypoint: ["/bin/bash", "/init_airflow.sh"]
 
   airflow:
-    build: .
+    build:
+      context: .
+      dockerfile: airflow/Dockerfile
     container_name: airflow
     restart: always
+    env_file:
+      - .env
     environment:
+      database : ${database}
+      user : ${user}
+      password : ${password}
+      host : ${host}
+      port : ${port}
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    extra_hosts:
+      - "host.docker.internal:host-gateway" 
     volumes:
-      - ./dags:/opt/airflow/dags
-      - ./logs:/opt/airflow/logs
-      - ./plugins:/opt/airflow/plugins
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
       - ./requirements.txt:/requirements.txt  
-      - ./data:/opt/airflow/data   
+      - ./airflow/data:/opt/airflow/data
+      - /media/rachid:/media/rachid   
     command: >
       bash -c "
         pip install --no-cache-dir -r /requirements.txt &&

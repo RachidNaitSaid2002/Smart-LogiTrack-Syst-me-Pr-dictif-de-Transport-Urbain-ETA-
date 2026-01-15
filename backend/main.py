@@ -20,6 +20,8 @@ from pyspark.sql import SparkSession
 from pyspark.sql import SparkSession
 from pyspark.ml.linalg import Vectors
 from pyspark.sql import Row
+from sqlalchemy import text
+
 
 
 load_dotenv()
@@ -62,8 +64,8 @@ async def login(user: UserLogin):
             return  {'message':'Password incorrect !!'}
     return {'message':'Username ou Password incorrect !!'}
 
+
 # Create Prediction ---------------------------------------------------------- :
-#response_model=PredictionOut
 @app.post('/predictions/')
 def create_prediction(prediction: PredictionCreate, credentials: HTTPBasicCredentials = Depends(bearer_scheme)):
     email = verify_jwt(credentials.credentials)
@@ -107,3 +109,84 @@ def create_prediction(prediction: PredictionCreate, credentials: HTTPBasicCreden
     db.commit()
     db.refresh(db_prediction)
     return db_prediction
+
+
+#avg-duration-by-hour use cte --------------------------------------------------------------
+@app.get("/analytics/avg-duration-by-hour/{pickup_hour}")
+def get_avg_duration_by_hour(pickup_hour: int, credentials: HTTPBasicCredentials = Depends(bearer_scheme)):
+    email = verify_jwt(credentials.credentials)
+    db_user = get_uer(db, email)
+
+    if db_user is None:
+        raise HTTPException(status.HTTP_401_UNAUTHORIZED, detail="Invalid authentication credentials")
+    if pickup_hour < 0 or pickup_hour > 23:
+        result = db.execute(
+            text("""
+                WITH avg_hour AS (
+                    SELECT
+                        pickup_hour,
+                        AVG("Durée_minutes") AS avgduration
+                    FROM public.silver_data
+                    GROUP BY pickup_hour
+                )
+                SELECT *
+                FROM avg_hour ;
+            """)
+        ).fetchall()
+        if not result:
+            raise HTTPException(status_code=404, detail="No data found")
+
+        return_query = []
+        for row in result: 
+            return_query.append({"pickup_hour": row.pickup_hour, "avgduration": row.avgduration})
+        return return_query
+    else:
+        result = db.execute(
+            text("""
+                WITH avg_hour AS (
+                    SELECT
+                        pickup_hour,
+                        AVG("Durée_minutes") AS avgduration
+                    FROM public.silver_data
+                    GROUP BY pickup_hour
+                )
+                SELECT *
+                FROM avg_hour where pickup_hour = :pickup_hour;
+            """),
+            {"pickup_hour": pickup_hour}
+        ).fetchone()
+
+        if not result:
+            raise HTTPException(status_code=404, detail="No data found")
+
+        return {"pickup_hour": result.pickup_hour, "avgduration": result.avgduration}
+
+
+
+#analytics/payment-analysis ------------------------------------------------------------------------
+@app.get("/analytics/payment-analysis")
+def payment_analysis(credentials: HTTPBasicCredentials = Depends(bearer_scheme)):
+    email = verify_jwt(credentials.credentials)
+    db_user = get_uer(db, email)
+
+    if db_user is None:
+        raise HTTPException(status.HTTP_401_UNAUTHORIZED, detail="Invalid authentication credentials")
+
+    result = db.execute(text("""
+        with payment_analysis as (
+            select payment_type, count(*) as total_trips, avg("Durée_minutes") as avg_duration
+            from public.silver_data
+            group by payment_type
+        )
+        select * from payment_analysis
+    """)).fetchall()
+
+    if not result:
+        raise HTTPException(status_code=404, detail="No data found")
+    
+    return_query = []
+
+    for row in result: 
+        return_query.append({"payment_type": row.payment_type, "total_trips": row.total_trips, "avg_duration":row.avg_duration})
+        
+    return return_query

@@ -1,0 +1,16 @@
+[2026-01-14T17:38:25.883+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_TAXI_TRIP.Build_Model_Training manual__2026-01-14T17:37:11.561587+00:00 [queued]>
+[2026-01-14T17:38:25.894+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_TAXI_TRIP.Build_Model_Training manual__2026-01-14T17:37:11.561587+00:00 [queued]>
+[2026-01-14T17:38:25.894+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2026-01-14T17:38:25.912+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): Build_Model_Training> on 2026-01-14 17:37:11.561587+00:00
+[2026-01-14T17:38:25.918+0000] {standard_task_runner.py:60} INFO - Started process 1118 to run task
+[2026-01-14T17:38:25.923+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ETL_TAXI_TRIP', 'Build_Model_Training', 'manual__2026-01-14T17:37:11.561587+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/ELT.py', '--cfg-path', '/tmp/tmphfpd53pa']
+[2026-01-14T17:38:25.926+0000] {standard_task_runner.py:88} INFO - Job 5: Subtask Build_Model_Training
+[2026-01-14T17:38:25.985+0000] {task_command.py:423} INFO - Running <TaskInstance: ETL_TAXI_TRIP.Build_Model_Training manual__2026-01-14T17:37:11.561587+00:00 [running]> on host 993c9366ec1d
+[2026-01-14T17:38:26.069+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ETL_TAXI_TRIP' AIRFLOW_CTX_TASK_ID='Build_Model_Training' AIRFLOW_CTX_EXECUTION_DATE='2026-01-14T17:37:11.561587+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-01-14T17:37:11.561587+00:00'
+[2026-01-14T17:40:06.929+0000] {logging_mixin.py:188} INFO - R2 : 0.9280355591879278
+[2026-01-14T17:40:06.931+0000] {logging_mixin.py:188} INFO - MAE : 1.873808621564093
+[2026-01-14T17:40:08.527+0000] {logging_mixin.py:188} INFO - All Is Good !!!!!!!!!!!!!!!
+[2026-01-14T17:40:08.528+0000] {python.py:201} INFO - Done. Returned value was: None
+[2026-01-14T17:40:08.544+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ETL_TAXI_TRIP, task_id=Build_Model_Training, execution_date=20260114T173711, start_date=20260114T173825, end_date=20260114T174008
+[2026-01-14T17:40:08.596+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-01-14T17:40:08.616+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

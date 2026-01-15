@@ -12,4 +12,3 @@ airflow users create \
     --lastname User \
     --role Admin \
     --email admin@example.com
-
