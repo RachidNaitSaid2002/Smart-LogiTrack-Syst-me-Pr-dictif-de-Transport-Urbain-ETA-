@@ -83,7 +83,7 @@ def create_prediction(prediction: PredictionCreate, credentials: HTTPBasicCreden
         prediction.Airport_fee,
         prediction.pickup_day_week,
         prediction.RateCodeID,
-        prediction.fare_amount
+        prediction.fare_amount,
     ]))
 
 
@@ -102,9 +102,10 @@ def create_prediction(prediction: PredictionCreate, credentials: HTTPBasicCreden
         pickup_day_week=prediction.pickup_day_week,
         RateCodeID=prediction.RateCodeID,
         fare_amount = prediction.fare_amount,
-        predicted_duration=expm1(predicted_duration)
-
+        predicted_duration=expm1(predicted_duration),
+        model_version=model_path.split("/")[-1]
     )
+    
     db.add(db_prediction)
     db.commit()
     db.refresh(db_prediction)

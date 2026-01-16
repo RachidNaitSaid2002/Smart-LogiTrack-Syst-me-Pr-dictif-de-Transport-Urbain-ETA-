@@ -1,5 +1,4 @@
 from pydantic import BaseModel
-from traitlets import Integer
 
 class PredictionBase(BaseModel):
     trip_distance: float

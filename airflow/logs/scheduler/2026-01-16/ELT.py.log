@@ -1,0 +1,68 @@
+[2026-01-16T10:10:43.536+0000] {processor.py:161} INFO - Started process (PID=196) to work on /opt/airflow/dags/ELT.py
+[2026-01-16T10:10:43.537+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ELT.py for tasks to queue
+[2026-01-16T10:10:43.540+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:10:43.539+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ELT.py
+[2026-01-16T10:10:44.503+0000] {processor.py:840} INFO - DAG(s) 'ETL_TAXI_TRIP' retrieved from /opt/airflow/dags/ELT.py
+[2026-01-16T10:10:44.744+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:10:44.743+0000] {override.py:1769} INFO - Created Permission View: can read on DAG:ETL_TAXI_TRIP
+[2026-01-16T10:10:44.762+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:10:44.761+0000] {override.py:1769} INFO - Created Permission View: can delete on DAG:ETL_TAXI_TRIP
+[2026-01-16T10:10:44.775+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:10:44.774+0000] {override.py:1769} INFO - Created Permission View: can edit on DAG:ETL_TAXI_TRIP
+[2026-01-16T10:10:44.776+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:10:44.775+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-16T10:10:44.797+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:10:44.796+0000] {dag.py:3058} INFO - Creating ORM DAG for ETL_TAXI_TRIP
+[2026-01-16T10:10:44.800+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:10:44.799+0000] {dag.py:3823} INFO - Setting next_dagrun for ETL_TAXI_TRIP to None, run_after=None
+[2026-01-16T10:10:44.829+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ELT.py took 1.298 seconds
+[2026-01-16T10:11:15.040+0000] {processor.py:161} INFO - Started process (PID=213) to work on /opt/airflow/dags/ELT.py
+[2026-01-16T10:11:15.041+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ELT.py for tasks to queue
+[2026-01-16T10:11:15.043+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:11:15.043+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ELT.py
+[2026-01-16T10:11:15.890+0000] {processor.py:840} INFO - DAG(s) 'ETL_TAXI_TRIP' retrieved from /opt/airflow/dags/ELT.py
+[2026-01-16T10:11:15.937+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:11:15.936+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-16T10:11:16.046+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:11:16.045+0000] {dag.py:3823} INFO - Setting next_dagrun for ETL_TAXI_TRIP to None, run_after=None
+[2026-01-16T10:11:16.082+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ELT.py took 1.049 seconds
+[2026-01-16T10:11:46.250+0000] {processor.py:161} INFO - Started process (PID=225) to work on /opt/airflow/dags/ELT.py
+[2026-01-16T10:11:46.252+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ELT.py for tasks to queue
+[2026-01-16T10:11:46.255+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:11:46.254+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ELT.py
+[2026-01-16T10:11:46.904+0000] {processor.py:840} INFO - DAG(s) 'ETL_TAXI_TRIP' retrieved from /opt/airflow/dags/ELT.py
+[2026-01-16T10:11:46.933+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:11:46.932+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-16T10:11:46.954+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:11:46.954+0000] {dag.py:3823} INFO - Setting next_dagrun for ETL_TAXI_TRIP to None, run_after=None
+[2026-01-16T10:11:46.985+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ELT.py took 0.743 seconds
+[2026-01-16T10:15:29.794+0000] {processor.py:161} INFO - Started process (PID=195) to work on /opt/airflow/dags/ELT.py
+[2026-01-16T10:15:29.803+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ELT.py for tasks to queue
+[2026-01-16T10:15:29.805+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:15:29.804+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ELT.py
+[2026-01-16T10:15:30.688+0000] {processor.py:840} INFO - DAG(s) 'ETL_TAXI_TRIP' retrieved from /opt/airflow/dags/ELT.py
+[2026-01-16T10:15:30.956+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:15:30.954+0000] {override.py:1769} INFO - Created Permission View: can read on DAG:ETL_TAXI_TRIP
+[2026-01-16T10:15:30.980+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:15:30.979+0000] {override.py:1769} INFO - Created Permission View: can edit on DAG:ETL_TAXI_TRIP
+[2026-01-16T10:15:30.995+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:15:30.995+0000] {override.py:1769} INFO - Created Permission View: can delete on DAG:ETL_TAXI_TRIP
+[2026-01-16T10:15:30.997+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:15:30.996+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-16T10:15:31.018+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:15:31.017+0000] {dag.py:3058} INFO - Creating ORM DAG for ETL_TAXI_TRIP
+[2026-01-16T10:15:31.020+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:15:31.020+0000] {dag.py:3823} INFO - Setting next_dagrun for ETL_TAXI_TRIP to None, run_after=None
+[2026-01-16T10:15:31.063+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ELT.py took 1.276 seconds
+[2026-01-16T10:16:01.288+0000] {processor.py:161} INFO - Started process (PID=213) to work on /opt/airflow/dags/ELT.py
+[2026-01-16T10:16:01.294+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ELT.py for tasks to queue
+[2026-01-16T10:16:01.306+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:16:01.306+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ELT.py
+[2026-01-16T10:16:02.233+0000] {processor.py:840} INFO - DAG(s) 'ETL_TAXI_TRIP' retrieved from /opt/airflow/dags/ELT.py
+[2026-01-16T10:16:02.269+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:16:02.268+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-16T10:16:02.289+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:16:02.288+0000] {dag.py:3823} INFO - Setting next_dagrun for ETL_TAXI_TRIP to None, run_after=None
+[2026-01-16T10:16:02.342+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ELT.py took 1.062 seconds
+[2026-01-16T10:24:14.899+0000] {processor.py:161} INFO - Started process (PID=195) to work on /opt/airflow/dags/ELT.py
+[2026-01-16T10:24:14.901+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ELT.py for tasks to queue
+[2026-01-16T10:24:14.902+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:24:14.902+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ELT.py
+[2026-01-16T10:24:15.620+0000] {processor.py:840} INFO - DAG(s) 'ETL_TAXI_TRIP' retrieved from /opt/airflow/dags/ELT.py
+[2026-01-16T10:24:15.754+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:24:15.753+0000] {override.py:1769} INFO - Created Permission View: can read on DAG:ETL_TAXI_TRIP
+[2026-01-16T10:24:15.768+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:24:15.767+0000] {override.py:1769} INFO - Created Permission View: can edit on DAG:ETL_TAXI_TRIP
+[2026-01-16T10:24:15.776+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:24:15.776+0000] {override.py:1769} INFO - Created Permission View: can delete on DAG:ETL_TAXI_TRIP
+[2026-01-16T10:24:15.778+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:24:15.777+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-16T10:24:15.796+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:24:15.795+0000] {dag.py:3058} INFO - Creating ORM DAG for ETL_TAXI_TRIP
+[2026-01-16T10:24:15.797+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:24:15.797+0000] {dag.py:3823} INFO - Setting next_dagrun for ETL_TAXI_TRIP to None, run_after=None
+[2026-01-16T10:24:15.819+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ELT.py took 0.925 seconds
+[2026-01-16T10:24:46.018+0000] {processor.py:161} INFO - Started process (PID=213) to work on /opt/airflow/dags/ELT.py
+[2026-01-16T10:24:46.019+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ELT.py for tasks to queue
+[2026-01-16T10:24:46.021+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:24:46.020+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ELT.py
+[2026-01-16T10:24:46.627+0000] {processor.py:840} INFO - DAG(s) 'ETL_TAXI_TRIP' retrieved from /opt/airflow/dags/ELT.py
+[2026-01-16T10:24:46.664+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:24:46.664+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-16T10:24:46.678+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:24:46.678+0000] {dag.py:3823} INFO - Setting next_dagrun for ETL_TAXI_TRIP to None, run_after=None
+[2026-01-16T10:24:46.703+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ELT.py took 0.689 seconds
+[2026-01-16T10:25:53.031+0000] {processor.py:161} INFO - Started process (PID=195) to work on /opt/airflow/dags/ELT.py
+[2026-01-16T10:25:53.047+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ELT.py for tasks to queue
+[2026-01-16T10:25:53.049+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:25:53.049+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ELT.py
+[2026-01-16T10:25:53.876+0000] {processor.py:840} INFO - DAG(s) 'ETL_TAXI_TRIP' retrieved from /opt/airflow/dags/ELT.py
+[2026-01-16T10:25:54.083+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:25:54.082+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-16T10:25:54.098+0000] {logging_mixin.py:188} INFO - [2026-01-16T10:25:54.097+0000] {dag.py:3823} INFO - Setting next_dagrun for ETL_TAXI_TRIP to None, run_after=None
+[2026-01-16T10:25:54.126+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ELT.py took 1.101 seconds

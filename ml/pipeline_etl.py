@@ -76,7 +76,7 @@ def CheckDuplicated(Data):
         Data = Data.distinct()
         return Data
     return Data
-
+ 
 #-------------------------------------------------------------------------------------------------------------------------------------
 def Time_Cleaning(Data):
     Data = Data.withColumn("Durée", col("tpep_dropoff_datetime") - col("tpep_pickup_datetime"))

@@ -205,27 +205,23 @@ with DAG(
 ) as dag:
 
     T1 = PythonOperator(
-        task_id="Extract",
+        task_id="Extract", 
         python_callable=Extract_data,
-        dag=dag,
     )
 
     T2 = PythonOperator(
         task_id="Save_Bronze",
         python_callable=Save_Bronze_Local,
-        dag=dag,
     )
 
     T3 = PythonOperator(
         task_id="Prepare_Silver",
         python_callable=Prepare_Silver_Data,
-        dag=dag,
     )
 
     T4 = PythonOperator(
         task_id="Build_Model_Training",
         python_callable=Build_Model,
-        dag=dag,
     )
 
     T1 >> T2 >> T3 >> T4
