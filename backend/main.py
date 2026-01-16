@@ -16,12 +16,10 @@ import os
 from backend.Auth.auth import get_password_hash, get_uer, verify_jwt, create_jwt, verify_password
 from pyspark.ml.regression import GBTRegressionModel
 from pyspark.sql import SparkSession
-
 from pyspark.sql import SparkSession
 from pyspark.ml.linalg import Vectors
 from pyspark.sql import Row
 from sqlalchemy import text
-
 
 
 load_dotenv()
@@ -32,12 +30,14 @@ bearer_scheme = HTTPBearer()
 
 Base.metadata.create_all(engine)
 app = FastAPI()
-spark = SparkSession.builder.appName("App").getOrCreate()
+
+def get_spark():
+    return SparkSession.builder.getOrCreate()
 
 
 db = SessionLocal()
   
-# SignUp --------------------------------------------------------------------- :
+# SignUp --------------------------------------------------------------------- 
 @app.post('/signup')
 def Signup(user: UserCreate):
     db_user = get_uer(db, user.email)
@@ -51,7 +51,7 @@ def Signup(user: UserCreate):
     return {'message':'User Register Successfully'}
 
 
-# Login ----------------------------------------------------------------------- :
+# Login ----------------------------------------------------------------------- 
 @app.post('/login')
 async def login(user: UserLogin):
     db_user = get_uer(db, user.email)
@@ -65,7 +65,7 @@ async def login(user: UserLogin):
     return {'message':'Username ou Password incorrect !!'}
 
 
-# Create Prediction ---------------------------------------------------------- :
+# Create Prediction ---------------------------------------------------------- 
 @app.post('/predictions/')
 def create_prediction(prediction: PredictionCreate, credentials: HTTPBasicCredentials = Depends(bearer_scheme)):
     email = verify_jwt(credentials.credentials)
@@ -86,7 +86,7 @@ def create_prediction(prediction: PredictionCreate, credentials: HTTPBasicCreden
         prediction.fare_amount,
     ]))
 
-
+    spark = get_spark()
     df = spark.createDataFrame([features])
 
     lr_model_loaded = GBTRegressionModel.load(model_path)
@@ -161,7 +161,6 @@ def get_avg_duration_by_hour(pickup_hour: int, credentials: HTTPBasicCredentials
             raise HTTPException(status_code=404, detail="No data found")
 
         return {"pickup_hour": result.pickup_hour, "avgduration": result.avgduration}
-
 
 
 #analytics/payment-analysis ------------------------------------------------------------------------

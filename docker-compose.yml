@@ -24,11 +24,11 @@ services:
     env_file:
       - .env
     environment:
-      database : ${database}
-      user : ${user}
-      password : ${password}
-      host : ${host}
-      port : 5433
+      database : airflow
+      user : airflow
+      password : airflow
+      host : postgres
+      port : 5432
     ports:
       - "8000:8000"
     depends_on:
@@ -59,11 +59,11 @@ services:
     env_file:
       - .env
     environment:
-      database : ${database}
-      user : ${user}
-      password : ${password}
-      host : ${host}
-      port : ${port}
+      database : airflow
+      user : airflow
+      password : airflow
+      host : postgres
+      port : 5432
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     extra_hosts:
